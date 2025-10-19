@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunny Répare - Montage PC et Dépannage Informatique PC & Linux à Saint-Martin-Vésubie</title>
+    <meta name="description" content="Ma vision est centrée sur l'Humain : réparation, maintenance et Montage PC (sauf Apple) à Saint-Martin-Vésubie. Service de proximité par votre spécialiste locale.">
+    <meta name="keywords" content="réparation informatique Saint-Martin-Vésubie, dépannage PC 0641879034, assistance informatique Vésubie, réparation ordinateur Linux, montage PC Saint-Martin-Vésubie, devis composants, service Humain, Bunny Répare, hors Apple">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        /* IMPORTATION DES POLICES */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+    </style>
+    
+    <style>
+        /* Définition des variables de couleurs basées sur votre logo et vos préférences */
+        :root {
+            --couleur-primaire: #1a1a1a; /* Noir très foncé, pour le fond */
+            --couleur-secondaire: #9370DB; /* Violet profond (l'accent "magique") */
+            --couleur-texte: #f5f5f5; /* Texte blanc cassé pour contraste */
+            --couleur-texte-sombre: #333333;
+            --couleur-accent: #FFD700; /* Or/Jaune du logo pour les CTA et icônes */
+            --couleur-neutre-logo: #D2B48C; /* Couleur "chair" du lapin (utilisé subtilement) */
+            --couleur-alerte: #DC3545; /* Rouge pour la note importante */
+            --police-titre: 'Poppins', sans-serif; 
+            --police-corps: 'Roboto', Arial, sans-serif; 
+        }
+
+        /* Fonctionnement: Réinitialisation des styles par défaut du navigateur */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--police-corps);
+            line-height: 1.6;
+            color: var(--couleur-texte);
+            background-color: var(--couleur-primaire);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- En-tête (Header) --- */
+        header {
+            background: var(--couleur-primaire);
+            color: var(--couleur-texte);
+            padding: 15px 0;
+            border-bottom: 2px solid var(--couleur-secondaire);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo-container {
+            display: flex; 
+            align-items: center;
+        }
+
+        /* Modification: Nouvelle taille du logo (110px) et marge */
+        header .logo-container img {
+            height: 110px; 
+            margin-right: 15px; 
+        }
+
+        /* SURCHARGE : La police Delius est appliquée spécifiquement à Bunny Répare */
+        header h1 a {
+            font-family: 'Delius', cursive; 
+            color: var(--couleur-texte);
+            text-decoration: none;
+            font-size: 2.2em; 
+            font-weight: 400; 
+        }
+
+        nav a {
+            color: var(--couleur-texte);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-family: var(--police-titre); 
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--couleur-secondaire);
+        }
+
+        /* --- Section Héro (Première vue) --- */
+        #hero {
+            text-align: center;
+            padding: 80px 0;
+            /* Remplacer 'hero-bg-bunny.jpg' par votre image de fond */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg-bunny.jpg') no-repeat center center/cover; 
+        }
+        
+        #hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--couleur-secondaire);
+            font-family: var(--police-titre);
+            font-weight: 700;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-family: var(--police-corps);
+        }
+
+        .btn {
+            background: var(--couleur-accent);
+            color: var(--couleur-texte-sombre);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-family: var(--police-titre);
+        }
+
+        .btn:hover {
+            background: var(--couleur-secondaire);
+            color: var(--couleur-texte);
+        }
+
+        /* --- Sections Générales --- */
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: var(--couleur-secondaire);
+            font-family: var(--police-titre);
+            font-weight: 600;
+        }
+
+        /* --- Section Services --- */
+        .services-grid {
+            display: flex;
+            justify-content: center; /* Centrer les éléments */
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-item {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 8px;
+            /* Nouveau calcul pour supporter 4 éléments */
+            flex: 1 1 200px; 
+            max-width: 280px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item i {
+            font-size: 2.5em;
+            color: var(--couleur-accent);
+            margin-bottom: 15px;
+        }
+
+        .service-item h4 {
+            color: var(--couleur-texte);
+            margin-bottom: 10px;
+            font-family: var(--police-titre);
+            font-weight: 600;
+        }
+        
+        /* CSS spécifique pour la note importante en rouge */
+        .red-alert {
+            margin-top: 30px; 
+            font-weight: bold; 
+            color: var(--couleur-alerte); /* Utilise la variable rouge définie */
+        }
+
+
+        /* --- Section Contact --- */
+        #contact {
+            background: #222;
+        }
+
+        #contact p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        #contact .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #contact .contact-details p {
+            margin: 5px 0;
+        }
+
+        /* --- Pied de page (Footer) --- */
+        footer {
+            background: var(--couleur-primaire);
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #333;
+        }
+
+        footer .social-links a {
+            color: var(--couleur-texte);
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        footer .social-links a:hover {
+            color: var(--couleur-secondaire);
+        }
+
+        /* --- Media Queries (Implémentation de la Responsivité) --- */
+        @media (max-width: 768px) {
+            header .logo-container img {
+                height: 80px; 
+            }
+            #hero h2 {
+                font-size: 2em;
+            }
+            .services-grid {
+                flex-direction: column;
+                align-items: center; 
+            }
+            .service-item {
+                max-width: 100%; 
+            }
+            nav {
+                margin-top: 10px;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="bunny-repare-logo.png" alt="Logo Bunny Répare" title="Bunny Répare - L'informatique Humaine"> 
+                <h1><a href="#hero">Bunny Répare</a></h1>
+            </div>
+            <nav>
+                <a href="#hero">Accueil</a>
+                <a href="#services">Mes Services</a>
+                <a href="#expertise">Ma Vision</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>L'Informatique centrée sur l'Humain, par votre Spécialiste à Saint-Martin-Vésubie.</h2>
+            <p>Dépannage, Réparation et Maintenance PC, Montage PC (Windows & Open Source). Sauf Apple.</p>
+            <a href="#contact" class="btn">Contactez-moi Maintenant !</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h3>Mes Services Informatiques - Proches de Vous</h3>
+            <div class="services-grid">
+                
+                <div class="service-item">
+                    <i class="fas fa-desktop"></i>
+                    <h4>Montage PC & Devis Composants</h4>
+                    <p>Je monte votre ordinateur sur mesure. Le devis des composants est facturé 30€, prix réduit à 15€ si vous choisissez le montage chez moi.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-wrench"></i>
+                    <h4>Dépannage & Réparation</h4>
+                    <p>Je résous les pannes en toute transparence. Je prends le temps de vous expliquer le problème, le diagnostic est rapide et le devis gratuit.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-virus-slash"></i>
+                    <h4>Sécurité & Nettoyage</h4>
+                    <p>Je supprime les virus et j'optimise votre système. Le côté humain ? Je vous donne des conseils simples pour éviter les problèmes futurs.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fab fa-linux"></i>
+                    <h4>Soutien Open Source</h4>
+                    <p>J'assure l'installation et le support de systèmes Linux. Je privilégie les logiciels Open Source pour le contrôle et la liberté de l'utilisateur.</p>
+                </div>
+
+            </div>
+            <p class="red-alert">Note importante : Bunny Répare est spécialisée en PC. Je ne prends pas en charge les équipements de la marque Apple.</p>
+        </div>
+    </section>
+    
+    <section id="expertise" style="background-color: #1f1f1f;">
+        <div class="container">
+            <h3>Ma Vision : L'Humain au Cœur de l'Informatique</h3>
+            <p>Mon engagement va au-delà de la simple réparation. En tant qu'auto-entreprise locale, mon objectif est de rétablir une relation de confiance entre vous et votre machine. Je ne cherche pas à vous vendre des solutions complexes, mais à vous fournir l'aide simple, rapide et didactique dont vous avez besoin.</p>
+            <p style="font-style: italic; margin-top: 20px;">Votre technicienne locale est là pour une assistance directe et sans jargon, directement dans la Vallée de la Vésubie.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h3>Contactez Bunny pour un Diagnostic</h3>
+            <p>Prête à redonner vie à votre ordinateur ? Contactez-moi par email ou par téléphone.</p>
+            
+            <div class="contact-details">
+                <p><i class="fas fa-envelope"></i> Email (Privilégié) : <a href="mailto:bunny.contact@protonmail.com" style="color: var(--couleur-secondaire); text-decoration: none;">bunny.contact@protonmail.com</a></p>
+                <p><i class="fas fa-phone"></i> Téléphone : <a href="tel:+33641879034" style="color: var(--couleur-secondaire); text-decoration: none;">+33 6 41 87 90 34</a></p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.discord.gg/CyeA89M3vH" target="_blank" title="Rejoignez 𝑳𝒆 𝑴𝒂𝒏𝒐𝒊𝒓 𝑫𝒆𝒔 𝑺𝒐𝒓𝒄𝒊𝒆̀𝒓𝒆𝒔 sur Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61555659278931" target="_blank" title="Page Facebook de Bunny Répare"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2025 Bunny Répare. Auto-entreprise à Saint-Martin-Vésubie. | Spécialiste Informatique, Vision Humaine (Hors Apple).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
